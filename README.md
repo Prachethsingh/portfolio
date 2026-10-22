@@ -10,6 +10,7 @@ Personal portfolio built as a dependency-free static site. Features a GSAP scrol
 
 ## Table of Contents
 
+- [Screenshots](#-preview--screenshots)
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Architecture](#architecture)
@@ -20,6 +21,25 @@ Personal portfolio built as a dependency-free static site. Features a GSAP scrol
 - [Publishing](#publishing)
 - [Checks & Tests](#checks--tests)
 - [License](#license)
+
+---
+
+## 📸 Preview & Screenshots
+
+### 🖥️ Interactive Era Journey (Hero)
+![Hero Section](docs/assets/screenshots/hero.png)
+
+### 📂 Selected Projects & Engineering Case Studies
+![Selected Projects](docs/assets/screenshots/projects.png)
+
+### 🔍 Deep-Dive Project Modal & System Flow
+![Project Case Study Detail](docs/assets/screenshots/project-modal.png)
+
+### 💬 In-Browser Retrieval Chatbot (Portfolio Assistant)
+![Retrieval Chatbot](docs/assets/screenshots/chat-modal.png)
+
+### 👤 About & Engineering Foundation
+![About Section](docs/assets/screenshots/about.png)
 
 ---
 
