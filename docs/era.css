@@ -1,0 +1,76 @@
+/* Cinematic scroll journey. Stage content is static until JS enhancement succeeds. */
+.era-journey { position: relative; background: #090b0e; }
+.era-stage { position: relative; height: calc(100svh - 100px); min-height: 620px; overflow: hidden; isolation: isolate; --era-color: #e8b67a; color: #eee9df; }
+#era-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; }
+.era-grain { position: absolute; inset: 0; z-index: 5; pointer-events: none; opacity: .12; background: repeating-linear-gradient(0deg,transparent 0 3px,#000 3px 4px); }
+.era-top,.era-bottom { position: absolute; left: 4%; right: 4%; display: flex; align-items: center; justify-content: space-between; z-index: 8; font: 10px var(--mono); letter-spacing: 1px; }
+.era-top { top: 26px; color: #b4b4ab; }
+.era-top a { color: #f0e6d5; border-bottom: 1px solid #6c655b; padding: 6px 0; }
+.era-bottom { bottom: 28px; color: #b4b4ab; }
+.era-copy { position: absolute; left: 7%; top: 21%; z-index: 4; width: 65%; pointer-events: none; }
+.era-copy h1,.era-copy h2 { font-size: clamp(52px,6.7vw,100px); line-height: 1.05; font-weight: 400; letter-spacing: -5px; margin: 22px 0; }
+.era-copy em { color: var(--era-color); font-family: Georgia,serif; }
+.era-copy > p:last-of-type { font-size: 15px; color: #bdbbb2; line-height: 1.8; }
+.era-copy .eyebrow { color: var(--era-color); font-size: 10px; }
+.era-copy--connected,.era-copy--ai { opacity: 0; visibility: hidden; }
+.era-copy--ai { top: 25%; }
+.era-project-link { display: inline-block; margin-top: 15px; padding: 12px 23px; border: 1px solid #76d6df; color: #c6faff; font-size: 13px; pointer-events: auto; }
+.era-project-link:hover { background: #76d6df; color: #091315; }
+.era-world { position: absolute; inset: 0; perspective: 1000px; transform-style: preserve-3d; }
+.terminal-shell { position: absolute; top: 20%; left: 54%; width: 510px; height: 365px; padding: 22px; background: linear-gradient(135deg,#615847,#292720 60%); border: 1px solid #8e8068; border-radius: 18px; box-shadow: 22px 24px 0 #171917,35px 40px 80px #0009,inset 2px 2px 4px #c2af7c60; transform: rotateY(-24deg) rotateX(8deg) rotateZ(2deg); transform-style: preserve-3d; }
+.terminal-top,.terminal-bottom { display: flex; justify-content: space-between; color: #c5ba9e; font: 9px var(--mono); letter-spacing: 1px; }
+.terminal-screen { position: relative; overflow: hidden; margin: 18px 0; height: 249px; background: #11120c; border: 8px solid #181a14; border-radius: 18px; padding: 18px; color: #d3a85d; box-shadow: inset 0 0 25px #9e6f2a33; text-shadow: 0 0 7px #dba34a66; }
+.terminal-screen p { font: 9px var(--mono); margin: 0 0 10px; }
+.terminal-screen pre { font: 13px/1.6 var(--mono); margin: 20px 0; position: relative; z-index: 1; }
+.terminal-scanlines { position: absolute; inset: 0; background: repeating-linear-gradient(0deg,#0000 0 2px,#0004 2px 3px); pointer-events: none; z-index: 3; }
+.terminal-grid { position: absolute; bottom: -30px; left: 0; width: 100%; height: 100px; background-image: linear-gradient(#aa7b3133 1px,transparent 1px),linear-gradient(90deg,#aa7b3133 1px,transparent 1px); background-size: 20px 20px; transform: perspective(100px) rotateX(45deg); }
+.terminal-bottom i { width: 4px; background: #b7a57d; height: 12px; }
+.network-window { position: absolute; opacity: 0; top: 20%; left: 58%; width: 310px; height: 215px; border: 1px solid #679fa27a; background: #0c191de8; padding: 22px; box-shadow: 0 0 60px #3bb9bb12; }
+.network-window span { font: 9px var(--mono); color: #6badaa; letter-spacing: 2px; }
+.network-window b { display: block; font-size: 20px; font-weight: 400; margin-top: 30px; }
+.window-two { top: 43%; left: 70%; }
+.window-three { top: 61%; left: 47%; }
+.window-bars { height: 48px; margin-top: 15px; background: repeating-linear-gradient(90deg,#59bec355 0 3px,transparent 3px 12px); clip-path: polygon(0 75%,12% 30%,24% 60%,36% 10%,48% 50%,60% 0,72% 40%,84% 20%,100% 70%,100% 100%,0 100%); }
+.window-code { color: #6d9998; font: 11px/1.8 var(--mono); margin-top: 16px; }
+.window-orbit { width: 90px; height: 30px; border: 1px solid #79bbba; border-radius: 50%; margin: 20px auto; transform: rotate(-20deg); }
+.era-chapters { display: flex; gap: 25px; font-size: 9px; }
+.era-chapters .active { color: var(--era-color); }
+.era-progress { position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: #ffffff12; z-index: 9; }
+.era-progress div { height: 100%; width: 100%; transform: scaleX(0); transform-origin: left; background: var(--era-color); }
+.era-native { height: 400svh; }
+.era-native .era-stage { position: sticky; top: 0; }
+@media (max-width: 900px) {
+  .era-stage { height: calc(100svh - 80px); min-height: 590px; }
+  .terminal-shell { left: 51%; width: 400px; height: 310px; top: 29%; }
+  .terminal-screen { height: 200px; }
+  .terminal-screen pre { font-size: 10px; }
+  .era-copy h1,.era-copy h2 { letter-spacing: -3px; }
+  .era-chapters { gap: 12px; font-size: 8px; }
+}
+@media (max-width: 600px) {
+  .era-stage { min-height: 680px; height: calc(100svh - 80px); }
+  .era-top { top: 20px; font-size: 8px; letter-spacing: 0; }
+  .era-top > span { max-width: 170px; line-height: 1.8; }
+  .era-copy { left: 7%; top: 12%; width: 88%; }
+  .era-copy h1,.era-copy h2 { font-size: clamp(45px,12vw,65px); letter-spacing: -2px; margin: 18px 0; }
+  .era-copy > p:last-of-type { font-size: 12px; }
+  .terminal-shell { top: 48%; left: 16%; width: 310px; height: 242px; padding: 13px; transform: rotateY(-20deg) rotateX(10deg); }
+  .terminal-top,.terminal-bottom { font-size: 6px; }
+  .terminal-screen { height: 168px; margin: 12px 0; padding: 10px; border-width: 5px; }
+  .terminal-screen p { font-size: 7px; }
+  .terminal-screen pre { font-size: 9px; margin: 12px 0; }
+  .era-bottom { bottom: 19px; font-size: 8px; }
+  .era-chapters { gap: 9px; font-size: 7px; }
+  .era-chapters span { max-width: 75px; line-height: 1.7; }
+  .era-scroll-hint { display: none; }
+  .network-window { top: 49%; left: 12%; width: 230px; height: 160px; padding: 15px; }
+  .network-window b { font-size: 16px; margin-top: 20px; }
+  .window-two { top: 59%; left: 40%; }
+  .window-three { top: 68%; left: 20%; }
+  .era-copy--ai { top: 17%; }
+  .era-project-link { margin-top: 7px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .era-journey { height: auto !important; }
+  .era-stage { position: relative !important; }
+}

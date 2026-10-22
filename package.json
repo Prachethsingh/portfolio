@@ -1,0 +1,10 @@
+{
+  "name": "pracheth-singh-portfolio",
+  "private": true,
+  "type": "module",
+  "description": "A readable, dependency-free portfolio with a perspective-projected 3D sculpture.",
+  "scripts": {
+    "check": "node --check docs/js/app.js && node --check docs/js/content.js && node --check docs/js/network-scene.js && node --check docs/js/project-art.js && node --check docs/js/repositories.js && node --check docs/js/resume.js && node --check docs/js/chat.js && node --check docs/js/retrieval.js && node --check docs/js/knowledge.js && node --check docs/js/era-journey.js",
+    "test": "node --test tests/retrieval.test.js"
+  }
+}

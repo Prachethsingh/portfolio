@@ -1,0 +1,156 @@
+/**
+ * Proportion system: φ supplies a rhythm, while content and legibility set limits.
+ * Keep portraits at 4:5; apply the golden rectangle to landscape project artwork.
+ */
+:root {
+  --phi: 1.618;
+  --font-body: 1rem;
+  --font-caption: 0.75rem;
+  --font-heading-small: 1.618rem;
+  --font-heading-medium: 2.618rem;
+  --font-heading-large: 4.236rem;
+  --space-1: 0.5rem;
+  --space-2: 0.8125rem;
+  --space-3: 1.3125rem;
+  --space-4: 2.125rem;
+  --space-5: 3.4375rem;
+  --space-6: 5.5625rem;
+  --space-7: 9rem;
+}
+
+body {
+  font-size: var(--font-body);
+  line-height: var(--phi);
+}
+
+/* Preserve the 16 → 26 → 42 → 68 hierarchy, with fluid mobile bounds. */
+h2 {
+  font-size: clamp(2rem, 3.4vw, var(--font-heading-medium));
+  letter-spacing: -0.035em;
+}
+h3 {
+  font-size: clamp(1.25rem, 2.1vw, var(--font-heading-small));
+  letter-spacing: -0.025em;
+}
+.era-copy h1,
+.era-copy h2 {
+  font-size: clamp(3rem, 5.5vw, var(--font-heading-large));
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+.contact-section h2 {
+  font-size: clamp(3rem, 5.5vw, var(--font-heading-large));
+  letter-spacing: -0.04em;
+}
+.project-card p,
+.about-copy > p,
+.skill-group p,
+.timeline p,
+.education-list p,
+.recognition-grid p,
+.community-feature-copy > p:not(.eyebrow) {
+  font-size: var(--font-body);
+  line-height: var(--phi);
+}
+.about-copy .lead {
+  font-size: clamp(1.25rem, 2.1vw, var(--font-heading-small));
+  line-height: 1.5;
+}
+.eyebrow,
+.tags span,
+.facts span,
+.education-list article > span,
+.timeline-type,
+.event-photo figcaption,
+.about-portrait figcaption {
+  font-size: 0.6875rem;
+}
+
+/* Ratio uses available space after the gap; narrow viewports become one column. */
+.about-grid,
+.education-section,
+.community-feature {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.618fr);
+  gap: var(--space-5);
+}
+.about-portrait,
+.event-photo {
+  width: 100%;
+  max-width: 400px;
+}
+.about-copy p,
+.community-feature-copy > p {
+  max-width: 64ch;
+}
+.section {
+  padding-block: var(--space-6);
+}
+.section-heading {
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+.project-grid {
+  gap: var(--space-5) var(--space-4);
+}
+.project-visual {
+  height: auto;
+  aspect-ratio: 1.618 / 1;
+}
+.filter-bar {
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+.about-section {
+  padding-block: var(--space-6);
+}
+.community-feature {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+}
+.community-feature-copy h3 {
+  font-size: clamp(2rem, 3.4vw, var(--font-heading-medium));
+}
+.recognition-grid {
+  gap: var(--space-4);
+}
+.contact-section {
+  padding-block: var(--space-6);
+}
+
+@media (max-width: 900px) {
+  .about-grid,
+  .education-section,
+  .community-feature {
+    gap: var(--space-4);
+  }
+  .section,
+  .about-section,
+  .contact-section {
+    padding-block: var(--space-5);
+  }
+  .project-grid {
+    gap: var(--space-4) var(--space-3);
+  }
+}
+@media (max-width: 700px) {
+  .about-grid,
+  .education-section,
+  .community-feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .about-copy {
+    padding-top: 0;
+  }
+  .recognition-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .recognition-grid h3 {
+    font-size: var(--font-heading-small);
+  }
+  .skills-grid {
+    gap: var(--space-3);
+  }
+  .section-heading p:not(.eyebrow) {
+    font-size: 0.875rem;
+  }
+}

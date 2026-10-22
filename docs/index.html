@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Pracheth Singh — AI/ML student and software engineer in Bengaluru. Explore applied AI, accessible technology, and full-stack engineering projects.">
+<meta name="theme-color" content="#111413">
+<meta property="og:title" content="Pracheth Singh — Intelligence, engineered.">
+<meta property="og:description" content="Selected projects in applied AI, software engineering, and accessible technology.">
+<title>Pracheth Singh — Applied AI & Engineering</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="era.css">
+<link rel="stylesheet" href="proportions.css">
+<script defer src="vendor/gsap.min.js"></script>
+<script defer src="vendor/ScrollTrigger.min.js"></script>
+<script type="module" src="js/app.js">
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="header wrap">
+<a class="wordmark" href="#home" aria-label="Pracheth Singh home">PS<span>.</span>
+</a>
+<nav aria-label="Main navigation">
+<a href="#work">Work</a>
+<a href="#about">About</a>
+<a href="#knowledge">Knowledge</a>
+<a href="#contact">Contact <span>↗</span>
+</a>
+</nav>
+<a class="header-link" href="https://github.com/Prachethsingh" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</header>
+<main id="main">
+<section class="era-journey" id="home" aria-label="From early computing to the AI era">
+  <div class="era-stage">
+    <canvas id="era-canvas" aria-hidden="true"></canvas>
+    <div class="era-grain" aria-hidden="true"></div>
+    <div class="era-top"><span>PRACHETH SINGH / AN ENGINEERING JOURNEY</span><a href="#work">Skip to projects ↘</a></div>
+    <div class="era-copy era-copy--past">
+      <p class="eyebrow">01 / THE MACHINE AGE</p>
+      <h1>It started<br>with a <em>command.</em></h1>
+      <p>A cursor. A circuit. A possibility.<br>Scroll into the story of computing.</p>
+    </div>
+    <div class="era-copy era-copy--connected" aria-hidden="true">
+      <p class="eyebrow">02 / THE CONNECTED AGE</p>
+      <h2>Then everything<br>became <em>connected.</em></h2>
+      <p>From isolated instructions to networks of ideas.<br>Software brought the world together.</p>
+    </div>
+    <div class="era-copy era-copy--ai" aria-hidden="true">
+      <p class="eyebrow">03 / THE INTELLIGENCE AGE</p>
+      <h2>Now we build<br>what comes <em>next.</em></h2>
+      <p>I’m Pracheth. I connect AI, software, and the physical world.<br>Explore the systems I’m learning to build.</p>
+      <a class="era-project-link" href="#work" tabindex="-1">Enter my work ↗</a>
+    </div>
+    <div class="era-world" aria-hidden="true">
+      <div class="terminal-shell">
+        <div class="terminal-top"><span>PS / PERSONAL COMPUTER</span><span>POWER ●</span></div>
+        <div class="terminal-screen"><div class="terminal-scanlines"></div><p>PRACHETH SYSTEMS [VERSION 1.0]</p><p>INITIALIZING A NEW PERSPECTIVE…</p><pre>&gt; curiosity.exe
+[ OK ] HARDWARE
+[ OK ] SOFTWARE
+[ .. ] INTELLIGENCE
+
+&gt; scroll_to_explore<span class="terminal-cursor">_</span></pre><div class="terminal-grid"></div></div>
+        <div class="terminal-bottom"><span>INPUT → PROCESS → POSSIBILITY</span><i></i><i></i><i></i></div>
+      </div>
+      <div class="network-window window-one"><span>01 / INPUT</span><b>Signals become data.</b><div class="window-bars"></div></div>
+      <div class="network-window window-two"><span>02 / CONNECTION</span><b>Data becomes context.</b><div class="window-code">01001 · 11010 · 00101<br>NODE → EDGE → NETWORK</div></div>
+      <div class="network-window window-three"><span>03 / INTELLIGENCE</span><b>Context becomes possibility.</b><div class="window-orbit"></div></div>
+    </div>
+    <div class="era-bottom"><span class="era-scroll-hint">SCROLL TO ENTER ↓</span><div class="era-chapters"><span class="active">01 — COMMAND</span><span>02 — CONNECTION</span><span>03 — INTELLIGENCE</span></div><span id="era-percent">000%</span></div>
+    <div class="era-progress"><div></div></div>
+  </div>
+</section>
+<section class="section wrap" id="work">
+<div class="section-heading">
+<div>
+<p class="eyebrow accent">01 / SELECTED WORK</p>
+<h2>Ideas made tangible.</h2>
+</div>
+<p>From intelligent agents to accessible technology.<br>A selection of work across software and hardware.</p>
+</div>
+<div class="filter-bar" role="group" aria-label="Filter projects">
+<button class="active" data-filter="all" aria-pressed="true">All work <small>04</small>
+</button>
+<button data-filter="ai" aria-pressed="false">AI & machine learning</button>
+<button data-filter="software" aria-pressed="false">Software systems</button>
+<button data-filter="data" aria-pressed="false">Data & simulation</button>
+</div>
+<div id="projects" class="project-grid">
+</div>
+<p class="work-footer">More experiments, source code, and ongoing work. <a href="https://github.com/Prachethsingh" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
+</p>
+</section>
+<section class="section wrap repository-section" id="repositories" aria-labelledby="repository-title">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow accent">SOURCE / PUBLIC REPOSITORIES</p>
+      <h2 id="repository-title">An open workbench.</h2>
+    </div>
+    <p>Projects, experiments, and learning repositories.<br>Directory checked on 22 October 2026.</p>
+  </div>
+  <label for="repository-search">Find a repository</label>
+  <input id="repository-search" type="search" placeholder="Search by name…" autocomplete="off">
+  <p id="repository-status" class="eyebrow muted" role="status" aria-live="polite"></p>
+  <div id="repository-list" class="repository-list"></div>
+  <p class="muted repository-note">Repository availability does not imply a completed or production-ready application.</p>
+</section>
+<section class="about-section" id="about">
+<div class="wrap about-grid">
+<div>
+<p class="eyebrow accent">02 / THE PERSON BEHIND THE WORK</p>
+<h2>Curious by nature.<br>
+<em>Engineer by practice.</em>
+</h2>
+<figure class="about-portrait">
+  <div class="public-photo-panel" aria-label="Pracheth Singh">PS</div>
+  <figcaption><span>PRACHETH SINGH</span><span>BENGALURU, INDIA</span></figcaption>
+</figure>
+</div>
+<div class="about-copy">
+<p class="lead">My path started with electrical engineering. Today, I’m studying how to make machines perceive, reason, and help.</p>
+<p>I’m Pracheth, a B.E. Artificial Intelligence & Machine Learning student at Dayananda Sagar Academy of Technology and Management in Bengaluru, graduating in 2027.</p>
+<p>My interests sit where applied AI meets useful software: memory-augmented agents, computer vision, accessible technology, and reliable backend systems. My electrical engineering background also keeps me close to sensors, robotics, and the physical world.</p>
+<div class="about-links">
+<a href="https://www.linkedin.com/in/pracheth-singh-98005a329/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+<a href="resume.html" target="_blank">View résumé ↗</a>
+</div>
+<div class="facts">
+<div>
+<strong>2027</strong>
+<span>Expected B.E. graduation</span>
+</div>
+<div>
+<strong>8.22</strong>
+<span>B.E. CGPA</span>
+</div>
+<div>
+<strong>AI + EEE</strong>
+<span>A cross-disciplinary foundation</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section wrap" id="knowledge">
+<div class="section-heading">
+<div>
+<p class="eyebrow accent">03 / KNOWLEDGE & PRACTICE</p>
+<h2>A connected toolkit.</h2>
+</div>
+<p>Tools used in my work, alongside topics<br>I’m studying and exploring.</p>
+</div>
+<div id="skills" class="skills-grid">
+</div>
+<details class="study-details">
+<summary>Explore study topics & experiments <span>+</span>
+</summary>
+<div id="study-topics">
+</div>
+<p class="muted">A record of topics explored, not a complete academic transcript or a claim of proficiency in every tool.</p>
+</details>
+</section>
+<section class="section wrap" id="experience">
+<div class="section-heading">
+<div>
+<p class="eyebrow accent">04 / EXPERIENCE</p>
+<h2>Learning in the real world.</h2>
+</div>
+</div>
+<div class="timeline">
+<article>
+<span class="eyebrow">JAN — JUN 2026</span>
+<div>
+<h3>Software Engineer Intern</h3>
+<p class="organization">Arohan · Hasprana Health Care Solutions</p>
+<p>Supported healthtech platform development and payment-gateway integration. Worked across product, marketing, and HR teams on elder-care and wearable-related services.</p>
+<p>Managed domain, cPanel, and deployment infrastructure for a platform using React, Node.js, Python, Docker, and AWS.</p>
+</div>
+<span class="timeline-type">SOFTWARE</span>
+</article>
+<article>
+<span class="eyebrow">JAN — APR 2024</span>
+<div>
+<h3>Electrical Maintenance Intern</h3>
+<p class="organization">Suprajit Automotive Limited · Bengaluru</p>
+<p>Assisted with technical documentation and manufacturing process understanding in an industrial environment.</p>
+</div>
+<span class="timeline-type">ENGINEERING</span>
+</article>
+</div>
+</section>
+<section class="section wrap education-section" id="education">
+<div>
+<p class="eyebrow accent">05 / FOUNDATION</p>
+<h2>Education.</h2>
+</div>
+<div class="education-list">
+<article>
+<span>2024 — 2027 · EXPECTED</span>
+<h3>B.E. Artificial Intelligence & Machine Learning</h3>
+<p>Dayananda Sagar Academy of Technology and Management, Bengaluru</p>
+<b>CGPA 8.22</b>
+</article>
+<article>
+<span>2021 — 2024</span>
+<h3>Diploma in Electrical & Electronics Engineering</h3>
+<p>PES Institute of Technology and Management, Shivamogga</p>
+<b>CGPA 8.35</b>
+</article>
+<details>
+<summary>Earlier education <span>+</span>
+</summary>
+<p>Class XII · State Board, Commerce · 2021 · 79%</p>
+<p>Class X · State Board · 2019 · 72.16%</p>
+</details>
+</div>
+</section>
+<section class="section wrap" id="research">
+<div class="section-heading">
+<div>
+<p class="eyebrow accent">06 / BEYOND THE CODE</p>
+<h2>Research. Teams. Community.</h2>
+</div>
+</div>
+<div class="recognition-grid">
+<article>
+<span class="eyebrow">01 / RESEARCH</span>
+<h3>AI in education</h3>
+<p>Co-authored “Literature Survey in AI in Education (AIED),” listed in my résumé as published in a Springer book series. Also co-authored a technical paper on the smart-alert system.</p>
+<small>Publication references to be added.</small>
+</article>
+<article>
+<span class="eyebrow">02 / HACKATHON</span>
+<h3>Healthcare, reimagined</h3>
+<p>1st Runner-up at the SSCE Healthcare Hackathon for a genotype and drug-interaction analysis system.</p>
+<small>Achievement recorded in my résumé.</small>
+</article>
+<article>
+<span class="eyebrow">03 / COLLABORATION</span>
+<h3>Engineering together</h3>
+<p>Contributed CNN, image-processing, and Raspberry Pi work to the SEVC autonomous car project, and steering-actuation research with Vulcan Racing Club.</p>
+</article>
+<article>
+<span class="eyebrow">04 / COMMUNITY</span>
+<h3>Making room for ideas</h3>
+<p>Event organisation with student and technical communities, including Bridge Ally 4.0 and ALMATRON.</p>
+</article>
+</div>
+<div class="community-feature">
+  <figure class="event-photo">
+    <div class="public-photo-panel public-event-panel">AWS<br>Future Builders<br>Connect</div>
+    <figcaption>AWS FUTURE BUILDERS CONNECT / BENGALURU</figcaption>
+  </figure>
+  <div class="community-feature-copy">
+    <p class="eyebrow accent">PEOPLE / IDEAS / CONNECTIONS</p>
+    <h3>Beyond the screen.</h3>
+    <p>Attending <strong>AWS Future Builders Connect in Bengaluru</strong> gave me an opportunity to step beyond coursework and personal projects, exchange ideas, and connect with people who share my interest in technology.</p>
+    <p>As an AI/ML student, I’m interested in how an idea becomes a usable application. Building a model is one part of that process; deploying it, managing data, and making it accessible to users are equally important. The experience strengthened my interest in cloud computing and its role in bringing AI applications into practical use.</p>
+    <p>I left with fresh perspectives and more motivation to keep experimenting, improve my engineering skills, and learn from the wider technology community.</p>
+    <a href="https://www.linkedin.com/in/pracheth-singh-98005a329/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+  </div>
+</div>
+</section>
+<section class="section wrap experiments" id="experiments-section">
+<p class="eyebrow accent">07 / THE WORKBENCH</p>
+<h2>Always exploring.</h2>
+<p class="muted">Project discussions and experiments at different stages. Completion and repository links are still being documented.</p>
+<div id="experiments">
+</div>
+</section>
+<section class="contact-section" id="contact">
+<div class="wrap">
+<p class="eyebrow">08 / LET’S CONNECT</p>
+<h2>Have something<br>
+<em>worth building?</em>
+</h2>
+<a class="email-link" href="mailto:prachethsingh@gmail.com">prachethsingh@gmail.com <span>↗</span>
+</a>
+<div class="contact-bottom">
+<p>Interested in early-career opportunities<br>in applied AI and software engineering.</p>
+<div>
+<a href="https://github.com/Prachethsingh" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+<a href="https://www.linkedin.com/in/pracheth-singh-98005a329/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+<a href="resume.html" target="_blank">Résumé ↗</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="wrap footer">
+<a class="wordmark" href="#home">PS<span>.</span>
+</a>
+<span>© <span id="year">
+</span> Pracheth Singh</span>
+<a href="#home">Back to top ↑</a>
+</footer>
+<dialog id="project-dialog" aria-labelledby="dialog-title">
+<button class="dialog-close" aria-label="Close project details">✕</button>
+<div id="project-detail">
+</div>
+</dialog>
+
+<button id="chat-launcher" class="chat-launcher" aria-haspopup="dialog" aria-controls="chat-dialog" aria-expanded="false">Ask about Pracheth <span aria-hidden="true">↗</span></button>
+<dialog id="chat-dialog" aria-labelledby="chat-title" aria-describedby="chat-description">
+  <header class="chat-header">
+    <div><p class="eyebrow accent">PORTFOLIO / Q&amp;A</p><h2 id="chat-title">A little more context.</h2></div>
+    <button id="chat-close" aria-label="Close portfolio assistant">✕</button>
+  </header>
+  <p id="chat-description">Source-linked answers from this portfolio. Retrieval mode · no generative model connected.</p>
+  <div class="chat-suggestions" aria-label="Suggested questions">
+    <button data-question="What projects has Pracheth built?">Projects</button>
+    <button data-question="Tell me about education and graduation">Education</button>
+    <button data-question="What internship experience does he have?">Experience</button>
+    <button data-question="How can I contact Pracheth?">Contact</button>
+  </div>
+  <div id="chat-messages" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversation"></div>
+  <form id="chat-form">
+    <label for="chat-question">Your question</label>
+    <div class="chat-input-row"><input id="chat-question" name="question" placeholder="Ask about a project or skill…" maxlength="500" required autocomplete="off"><button type="submit">Send ↗</button></div>
+  </form>
+  <div class="chat-footer"><span>Messages stay in this page and clear on reload.</span><button id="chat-clear">Clear chat</button></div>
+</dialog>
+
+</body>
+</html>
