@@ -25,4 +25,4 @@ npm run check
 npm test
 ```
 
-Personal photos are omitted from this public repository pending explicit approval to publish those assets. GSAP license headers are preserved in the vendored files; see https://gsap.com/standard-license/.
+Personal photos are included with the portfolio owner’s authorization. GSAP license headers are preserved in the vendored files; see https://gsap.com/standard-license/.
