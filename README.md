@@ -4,7 +4,7 @@ Personal portfolio built as a dependency-free static site. Features a GSAP scrol
 
 ## 🌐 Live Demo
 
-**[https://pracheth-singh-portfolio.peppymug8.chatgpt.site](https://pracheth-singh-portfolio.peppymug8.chatgpt.site)**
+**[https://portfolio-teal-nine-49.vercel.app](https://portfolio-teal-nine-49.vercel.app)**
 
 ---
 
@@ -130,7 +130,7 @@ index.html
 | Canvas | HTML5 Canvas API (era hero + network scene) |
 | Data fetching | `fetch()` → GitHub REST API v3 |
 | Testing | Node.js built-in `node:test` runner |
-| Hosting | GitHub Pages (`/docs` branch deployment) |
+| Hosting | Vercel (static, `docs/` as output directory — see `vercel.json`) |
 
 ---
 
