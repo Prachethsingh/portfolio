@@ -14,15 +14,27 @@ export const projects = [
     repository: 'https://github.com/Prachethsingh/self-learning-AI-agent',
   },
   {
-    id: 'alert', category: 'ai', title: 'Sound, translated into awareness.',
-    subtitle: 'An AI-based smart alert system for deaf people.',
-    tags: ['Audio ML', 'Python', 'Accessibility'],
+    id: 'setu', category: 'ai', title: 'Setu — Voice Bridge for Deaf Users',
+    subtitle: 'Two-way communication in Indian languages, live.',
+    tags: ['FastAPI', 'Speech-to-Text', 'Text-to-Speech', 'WebSocket'],
+    caption: 'SPEECH BRIDGE / ACCESSIBLE TECHNOLOGY',
+    problem: 'Deaf users and hearing speakers often have no shared, real-time channel — speech is not accessible one way, and typed replies are not heard the other way.',
+    approach: 'A two-way bridge built for the Gnani AI challenge: Prisma speech-to-text turns a hearing speaker’s voice into live captions in Indian languages, and Timbre text-to-speech speaks the deaf user’s typed replies aloud. Deployed live on Vercel.',
+    contribution: 'Built solo, end to end: FastAPI REST + WebSocket backend, Prisma STT and Timbre TTS integration, the frontend, and the Vercel deployment. Submitted to the Gnani AI challenge on 8 November 2026.',
+    flow: ['Speaker voice (microphone)', 'Prisma STT live captions', 'Typed reply', 'Timbre TTS spoken audio'],
+    limitation: 'Depends on the Gnani API and network latency; the first WebSocket handshake after idle can be slow on the current deployment tier.',
+    url: 'https://setu-voice-bridge.vercel.app',
+  },
+  {
+    id: 'alert', category: 'ai', title: 'AI Smart Alert System for Deaf People',
+    subtitle: 'Sound, translated into awareness — 1st Place, DSATM Project Exhibition 2026.',
+    tags: ['Audio ML', 'ESP32', 'ESP-NOW', 'IoT', 'Accessibility'],
     caption: 'SOUND RECOGNITION / ACCESSIBLE TECHNOLOGY',
     problem: 'Critical sounds such as alarms and sirens may not be accessible to people who are deaf.',
-    approach: 'Detect critical sounds using audio-based machine learning and translate detections into visual or physical alerts.',
-    contribution: 'Developed the final-year smart-alert system described in my résumé and co-authored a technical paper documenting its design and findings.',
-    flow: ['Audio input', 'Sound classification', 'Alert decision', 'Visual or physical feedback'],
-    limitation: 'Accuracy, false-alarm rates, device latency, and deployment conditions need documented evaluation before any safety-critical use.',
+    approach: 'An ESP32 fixed node (MAX9814 and INMP441 microphones, DHT22, IR flame sensor) classifies fire alarm, siren, ambulance and fire-truck sounds using MFCC-based audio ML at 98.80% accuracy, and alerts an ESP32 wearable over ESP-NOW — OLED display, LED and coin vibrator for visual and haptic alerts. If the user does not acknowledge within 20 seconds, an escalation message with GPS goes out, alongside mobile notifications over WiFi.',
+    contribution: 'Built with Deekshitha G, Varshita VA and Pavan Gowda K, guided by Prof. Indu B. Won 1st Place at the DSATM Project Exhibition (Open Day 2026, 13–14 November 2026). Co-authored paper on the system presented at ICOIICS 2026, an IEEE conference.',
+    flow: ['Audio and sensor input (ESP32 node)', 'MFCC sound classification', 'ESP-NOW alert to wearable', 'Visual and haptic feedback', 'No acknowledgement in 20s → GPS escalation'],
+    limitation: 'The documented evaluation is 98.80% classification accuracy on the project test set. Real-world false-alarm rates and long-term deployment conditions are still to be measured before any safety-critical use.',
   },
   {
     id: 'business', category: 'data', title: 'BUSINESS.IN',
@@ -57,7 +69,7 @@ export const skills = [
   ['03', 'Software & interfaces', 'React · TypeScript · JavaScript · React Native · Java'],
   ['04', 'Backend systems', 'FastAPI · Django · Flask · Node.js · Spring Boot · OpenAPI'],
   ['05', 'Data & infrastructure', 'SQL · PostgreSQL · Redis · NumPy · Pandas · Docker · AWS · Git · CI'],
-  ['06', 'Physical computing', 'Electrical engineering foundation · Raspberry Pi · Sensors · Computer vision'],
+  ['06', 'Physical computing', 'Electrical engineering foundation · ESP32 · ESP-NOW · Raspberry Pi · Sensors · Computer vision'],
 ];
 
 export const studyTopics = [

@@ -1,10 +1,9 @@
-/** Public repository names confirmed through GitHub on 22 October 2026. */
+/** Public repository names confirmed through GitHub on 17 November 2026. */
 export const repositories = [
   'self-learning-AI-agent',
   'business.in',
   'Full-Stack-Mini-Operations-ERP',
   'ai-powered-voice-based-24.7-booking-system',
-  'AI-for-Low-Digital-Literacy',
   'The-Celluloid-Cafe',
   'ERP-CRM-system',
   'cool-_city_ai',
@@ -16,6 +15,8 @@ export const repositories = [
   'git',
   'inside-hotel',
   'Prachethsingh',
+  'ecommerce',
+  'portfolio',
 ];
 
 export function initializeRepositoryDirectory() {

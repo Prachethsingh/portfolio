@@ -2,6 +2,13 @@
 const frame = (content) => `<svg viewBox="0 0 540 270" aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">${content}</svg>`;
 
 export function projectArtwork(id) {
+  if (id === 'setu') {
+    const bars = Array.from({length:18},(_,i) => {
+      const h = 10 + Math.pow(Math.sin(i * 0.9),2) * 55;
+      return `<path d="M${60+i*9} ${105-h/2}v${h}" stroke="#7d9367" stroke-width="3" stroke-linecap="round"/>`;
+    }).join('');
+    return frame(`${bars}<path d="M235 105h45" stroke="#897155" stroke-dasharray="3 4"/><rect x="295" y="70" width="185" height="70" rx="12" fill="#202424" stroke="#cead81"/><path d="M315 95h145M315 115h95" stroke="#d8b88f" stroke-width="4" stroke-linecap="round"/><path d="M330 140l-8 22 34-20" fill="#202424" stroke="#cead81"/>`);
+  }
   if (id === 'agent') {
     const nodes = [[270,135],[140,75],[135,200],[400,65],[410,200],[270,30],[270,245]];
     const edges = nodes.slice(1).map(([x,y]) => `<path d="M270 135L${x} ${y}" stroke="#7d9367" stroke-width="1"/><circle cx="${x}" cy="${y}" r="19" stroke="#78915e"/><circle cx="${x}" cy="${y}" r="4" fill="#aec288"/>`).join('');

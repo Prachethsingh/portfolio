@@ -21,7 +21,7 @@ export const knowledge = [
   {
     id: 'contact', title: 'Contact & professional profiles', href: '#contact',
     keywords: 'contact email reach connect linkedin github hire hiring job opportunity roles looking',
-    text: 'Email: prachethsingh@gmail.com. GitHub: github.com/Prachethsingh. LinkedIn: linkedin.com/in/pracheth-singh-98005a329/. Pracheth is interested in entry-level applied AI and software engineering opportunities. Current joining availability is not documented.',
+    text: 'Email: prachethsingh@gmail.com. GitHub: github.com/Prachethsingh. LinkedIn: linkedin.com/in/pracheth-singh/. Pracheth is seeking a 6-month internship running January–June 2027 (his final semester), and early-career applied AI and software engineering opportunities.',
   },
   {
     id: 'resume', title: 'Résumé', href: 'resume.html',
@@ -35,8 +35,8 @@ export const knowledge = [
   },
   {
     id: 'research', title: 'Research & achievements', href: '#research',
-    keywords: 'research paper publication springer achievement award hackathon leadership racing sevc',
-    text: 'The résumé records co-authorship of “Literature Survey in AI in Education (AIED)” in a Springer book series and a paper on the smart-alert system. Publication references are still to be added. It also records 1st Runner-up at the SSCE Healthcare Hackathon, contributions to SEVC and Vulcan Racing Club, and organisation of Bridge Ally 4.0 and ALMATRON.',
+    keywords: 'research paper publication springer achievement award hackathon leadership racing sevc icoiics ieee first place exhibition smart alert',
+    text: 'Pracheth won 1st Place at the DSATM Project Exhibition (Open Day 2026, 13–14 November 2026) for the AI-based smart alert system for deaf people, built with Deekshitha G, Varshita VA and Pavan Gowda K and guided by Prof. Indu B; the system reached 98.80% audio classification accuracy, and a co-authored paper on it was presented at ICOIICS 2026, an IEEE conference. He also co-authored “Literature Survey in AI in Education (AIED)” in a Springer book series, was 1st Runner-up at the SSCE Healthcare Hackathon, contributed to SEVC and Vulcan Racing Club, and organised Bridge Ally 4.0 and ALMATRON.',
   },
   {
     id: 'skills', title: 'Technical skills', href: '#knowledge',
@@ -51,7 +51,7 @@ export const knowledge = [
   {
     id: 'projects', title: 'Featured projects', href: '#work',
     keywords: 'projects portfolio work built applications showcase',
-    text: 'Featured work includes the Memory-Augmented AI Agent, AI-Based Smart Alert System for Deaf People, BUSINESS.IN commercial location simulator, and Full-Stack Operations ERP. Individual case studies describe contributions, architecture, and limitations.',
+    text: 'Featured work includes Setu — a live two-way voice bridge for deaf users, the Memory-Augmented AI Agent, the AI Smart Alert System for Deaf People (1st Place, DSATM Project Exhibition 2026), BUSINESS.IN commercial location simulator, and Full-Stack Operations ERP. Individual case studies describe contributions, architecture, and limitations.',
   },
   ...projects.map(project => ({
     id: project.id, title: project.title, href: '#work',
@@ -61,7 +61,7 @@ export const knowledge = [
   {
     id: 'repositories', title: 'Public GitHub directory', href: '#repositories',
     keywords: 'repositories repository source code github repo',
-    text: `The directory contains ${repositories.length} public repositories, verified on 22 October 2026: ${repositories.join(', ')}. Repository availability does not establish completion or production readiness.`,
+    text: `The directory contains ${repositories.length} public repositories, verified on 17 November 2026: ${repositories.join(', ')}. Repository availability does not establish completion or production readiness.`,
   },
   {
     id: 'experiments', title: 'Ongoing experiments', href: '#experiments-section',
